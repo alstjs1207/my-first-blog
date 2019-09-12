@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+	<div class="post">
+		<h1>{{ post.title }}</h1>
+		<p>{{ post.author|linebreaksbr }}</p>
+		<p>{{ post.text|linebreaksbr }}</p>
+		{% if post.published_date %}		
+			<div class="date">						
+				<p>published: {{ post.published_date }}</p>
+			</div>
+		{% endif %}
+	<a href="{% url 'post_list' %}">목록</a>
+	</div>
+{% endblock%}
+			
