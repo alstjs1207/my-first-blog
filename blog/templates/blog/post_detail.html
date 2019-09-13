@@ -12,6 +12,7 @@
 	{% if user.is_authenticated %}
 	   {% if post.author == user %}	
 		<a class="btn btn-sm btn-outline-primary" href="{% url 'post_edit' pk=post.pk %}">수정</a>
+		<a class="btn btn-sm btn-outline-primary" href="{% url 'post_remove' pk=post.pk %}">삭제</a>
 	   {% endif%}	
 	{% endif %}
 	<a class="btn btn-sm btn-outline-secondary" href="{% url 'post_list' %}">목록</a>
