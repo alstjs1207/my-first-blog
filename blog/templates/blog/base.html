@@ -5,15 +5,22 @@
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 	<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">	
 	<link rel="stylesheet" href="{% static 'css/blog.css' %}">
-	<link rel="stylesheet" href="{% static 'css/base.css' %}">
 	<title>Django blog</title>
     </head>
     <body>
-        <div class="page-header">
-		{% if user.is_authenticated %}
-			<a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-		{% endif %}
-            <h1><a href="{% url 'post_list' %}">Django Blog</a></h1>
+        <div class="header">
+		 <nav>
+			<ul class="nav nav-pills pull-right">
+			{% if user.is_authenticated %}
+				<li role="presentation" class="active"><a href="{% url 'post_new' %}" class="">posting</a></li>
+				<li role="presentation"><a href="{% url 'admin:index' %}">{{user.username}}</a></li>
+				<li role="presentation"><a href="{% url 'logout' %}">Log out</a></li>
+			{% else %}
+				<li role="presentation"><a href="{% url 'login' %}" class=""><span class="glyphicon glyphicon-lock"></span></a></li>
+			{% endif %}
+			</ul>
+		 </nav>
+		 <h1 class="text-muted"><a href="{% url 'post_list' %}">Django Blog</a></h1>
         </div>
 	<div class="container">
 		<div class="row">
@@ -21,13 +28,14 @@
     			{% endblock %}
 		</div>
 	</div>
-
-        <div class="container">
-            <p class="float-right">
-             <a href="#">Back to top</a>
-            </p>
-            <p>Django Board is &copy; 2019 msyu All rights reserved.</p>
-            <p>contact me</p>
-	</div>
+	<footer class="text-muted">
+		<div class="container">
+					<p class="float-right">
+						<a href="#">Back to top</a>
+					</p>
+					<p>Django Board is &copy; 2019 msyu All rights reserved.</p>
+					<p>contact me</p>
+		</div>
+	</footer>
     </body>
 </html>

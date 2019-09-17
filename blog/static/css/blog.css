@@ -1,46 +1,53 @@
-.page-header {
-    background-color: #ff9400;
-    margin-top: 0;
-    padding: 20px 20px 20px 40px;
+:root {
+  --jumbotron-padding-y: 3rem;
 }
 
-.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-    color: #ffffff;
-    font-size: 36pt;
-    text-decoration: none;
+.jumbotron {
+  padding-top: var(--jumbotron-padding-y);
+  padding-bottom: var(--jumbotron-padding-y);
+  margin-bottom: 0;
+  background-color: #fff;
+}
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: calc(var(--jumbotron-padding-y) * 2);
+    padding-bottom: calc(var(--jumbotron-padding-y) * 2);
+  }
 }
 
-.content {
-    margin-left: 40px;
+.jumbotron p:last-child {
+  margin-bottom: 0;
 }
 
-h1, h2, h3, h4 {
-    font-family: 'Lobster', cursive;
+.jumbotron-heading {
+  font-weight: 300;
 }
 
-.date {
-    color: #828282;
-}
-/*
-.save {
-    float: right;
+.jumbotron .container {
+  max-width: 40rem;
 }
 
-.post-form textarea, .post-form input {
-    width: 100%;
-}*/
-
-.top-menu, .top-menu:hover, .top-menu:visited {
-    color: #ffffff;
-    float: right;
-    font-size: 26pt;
-    margin-right: 20px;
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
-.post {
-    margin-bottom: 70px;
+footer p {
+  margin-bottom: .25rem;
 }
 
-.post h1 a, .post h1 a:visited {
-    color: #000000;
+table {
+	text-align:center; 
+	border:1px solid #dddddd;
+}
+
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+
+.mainview {
+	border: 1px solid #ddd;
+	border-color:white;
+	margin-bottom: 20px;
+	padding: 4px;
+	height: 250px;
 }

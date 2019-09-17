@@ -1,0 +1,30 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+    {% if form.errors %}
+        <p>이름과 비밀번호가 일치하지 않습니다. 다시 시도해주세요.</p>
+    {% endif %}
+	<div class="col-xs-6 col-sm-4 col-md-4 col-xs-offset-3 col-sm-offset-4 col-md-offset-4">
+    <form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+        <table class="table table-striped">
+		<tr>
+			<td colspan="2">로그인</td>
+		</tr>
+        <tr>
+            <td>{{ form.username.label_tag }}</td>
+            <td>{{ form.username }}</td>
+        </tr>
+        <tr>
+            <td>{{ form.password.label_tag }}</td>
+            <td>{{ form.password }}</td>
+        </tr>
+		<tr>
+			<td colspan="2"> <input type="submit" value="login" /></td>
+		</tr>
+        </table>
+
+       
+    </form>
+	</div>
+{% endblock %}
+			

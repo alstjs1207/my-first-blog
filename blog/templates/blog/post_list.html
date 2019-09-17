@@ -2,6 +2,7 @@
 {% block content %}
 	{% for post in posts %}
 		<div class="col-md-4">
+			<div class="mainview">
 			<h1><a href="{% url 'post_detail' pk=post.pk%}">{{ post.title }}</a></h1>
 			<p>{{ post.author|linebreaksbr }}</p>
 			<p>{{ post.text|linebreaksbr }}</p>
@@ -10,6 +11,7 @@
 					<p>published: {{ post.published_date }}</p>
 				</div>
 			{% endif %}
+			</div>
 		</div>
 	{% endfor %}
 {% endblock%}
