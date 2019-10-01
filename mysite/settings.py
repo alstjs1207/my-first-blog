@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'imagekit',
 ]
 
 MIDDLEWARE = [
@@ -126,3 +127,7 @@ LOGIN_REDIRECT_URL = '/'
 
 # login redirect
 LOGOUT_REDIRECT_URL = '/'
+
+#media 정보 추가 (이미지 업로드)
+MEDIA_URL = '/images/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'images')

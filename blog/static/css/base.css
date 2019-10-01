@@ -10,8 +10,8 @@ html, body {
 
 div.container {
 	height: 100%;
-	width: 100%;
-	padding: 0 0 0 0;
+	width: 1170px;
+	/*padding: 0 0 0 0;*/
 }
 
 /* #joinForm {

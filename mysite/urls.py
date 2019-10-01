@@ -16,9 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.contrib.auth import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/',include('django.contrib.auth.urls')),
     path('',include('blog.urls')),
 ]
+
+# 이미지 경로를 찾지 못하는 경우 media 파일 서빙
+#static 파일이 접근가능하도록 설정
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

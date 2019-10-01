@@ -1,14 +1,14 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-    <form method="POST" class="post-form">
+    <form method="POST" class="post-form" enctype="multipart/form-data">
 		{% csrf_token %}
 		<div>
 			<table class="table table-striped" style="text-align: center;">
 				<thead>
 					<tr>
 						<th colspan="2" style="text-align: center;"> New post </th>
-					</tr>  
+					</tr>
 				</thead>
 				{{ form.as_table }}
 			</table>
@@ -19,4 +19,3 @@
     </form>
 	<a class="btn btn-sm btn-outline-secondary" href="{% url 'post_list' %}">목록</a>
 {% endblock %}
-			

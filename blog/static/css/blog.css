@@ -30,6 +30,7 @@
 footer {
   padding-top: 3rem;
   padding-bottom: 3rem;
+  text-align: center;
 }
 
 footer p {
@@ -37,7 +38,7 @@ footer p {
 }
 
 table {
-	text-align:center; 
+	text-align:center;
 	border:1px solid #dddddd;
 }
 
@@ -50,4 +51,13 @@ table {
 	margin-bottom: 20px;
 	padding: 4px;
 	height: 250px;
+}
+
+#viewForm {
+  text-align: center;
+  margin: auto;
+}
+
+#content{
+  /* height: 350px; */
 }

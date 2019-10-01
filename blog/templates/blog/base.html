@@ -3,8 +3,9 @@
     <head>
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-	<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">	
+	<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
 	<title>Django blog</title>
     </head>
     <body>
@@ -28,14 +29,14 @@
     			{% endblock %}
 		</div>
 	</div>
-	<footer class="text-muted">
-		<div class="container">
-					<p class="float-right">
-						<a href="#">Back to top</a>
-					</p>
-					<p>Django Board is &copy; 2019 msyu All rights reserved.</p>
-					<p>contact me</p>
-		</div>
-	</footer>
+  	<footer class="text-muted" id="footer">
+  		<div>
+  					<p class="float-right">
+  						<a href="#">Back to top</a>
+  					</p>
+  					<p>Django Board is &copy; 2019 msyu All rights reserved.</p>
+  					<p>contact me</p>
+  		</div>
+  	</footer>
     </body>
 </html>
