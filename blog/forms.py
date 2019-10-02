@@ -1,7 +1,6 @@
 from django import forms
 
-from .models import Post
-from .models import Ipost
+from .models import Post, Ipost, Comment
 
 class PostForm(forms.ModelForm):
 
@@ -14,3 +13,9 @@ class IpostForm(forms.ModelForm):
     class Meta:
         model = Ipost
         fields = ('title', 'text','images',)
+
+class CommentForm(forms.ModelForm):
+
+    class Meta:
+        model = Comment
+        fields = ('author', 'text',)

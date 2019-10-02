@@ -10,6 +10,7 @@
 				<p>{{ post.author|linebreaksbr }}</p>
 				<p>{{ post.images|linebreaksbr }}</p>
 				<p>{{ post.text|linebreaksbr }}</p>
+				<a href="{% url 'post_detail' pk=post.pk %}"> 댓글 {{ post.approved_comments.count }}개</a>
 				{% if post.published_date %}
 					<div class="date">
 						<p>published: {{ post.published_date }}</p>
